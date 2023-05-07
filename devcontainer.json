@@ -1,0 +1,12 @@
+ {
+     "name": "Your Container Name",
+     "image": "mcr.microsoft.com/vscode/devcontainers/base:0-{OS}",
+     "settings": {
+       "terminal.integrated.shell.linux": "/bin/bash"
+     },
+     "extensions": [
+       // Add necessary extensions for your database, e.g., "ms-azuretools.vscode-docker"
+     ],
+     "postCreateCommand": "apt-get update && apt-get install -y [your-db-client] && echo 'Done!'",
+     "forwardPorts": [3306] // Replace with the port number of your database
+   }
